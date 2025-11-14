@@ -59,14 +59,13 @@ Minimum LR set to prevent model collapse
 
 ## Model Evaluation
 
-Evaluated models on validation/testing datasets
-Metrics computed:
-Accuracy
-Precision
-Recall
-F1-score
-Visualized confusion matrix for class-wise performance
-Compared CNN vs Transfer Learning model performance
+Models were evaluated using multiple metrics:
+
+Accuracy: Overall classification accuracy
+Precision: Ratio of true positives to all positive predictions
+Recall: Ratio of true positives to all actual positives
+F1-Score: Harmonic mean of precision and recall
+Confusion Matrix: Detailed class-wise performance analysis
 
  ## Transfer Learning Summary
 
