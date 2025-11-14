@@ -1,39 +1,106 @@
-#### Deep-Learning-Image-Classification-using-CNN-and-Transfer-Learning
-### Task Description
-In this project, we will first build a Convolutional Neural Network (CNN) model from scratch to classify images from a given dataset into predefined categories. Then, they will implement a transfer learning approach using a pre-trained model. Finally, we will compare the performance of the custom CNN and the transfer learning model based on evaluation metrics and analysis.
+Deep Learning Image Classification using CNN and Transfer Learning
+📌 Project Description
 
-## Dataset
-The dataset for this task is the CIFAR-10 dataset, which consists of 60,000 32x32 color images in 10 classes, with 6,000 images per class. You can download the dataset from here https://www.cs.toronto.edu/~kriz/cifar.html .
+This project focuses on building two deep learning models for image classification:
 
-### Assessment Components
-## Data Preprocessing
+A Custom Convolutional Neural Network (CNN) built from scratch
+A Transfer Learning Model using pre-trained architectures
+The objective is to preprocess image data, train both models, compare their performance, and analyze the impact of techniques such as Early Stopping and Learning Rate Reduction.
 
-Data loading and preprocessing (e.g., normalization, resizing, augmentation).
-Created visualizations of some images, and labels.
-## Model Architecture
+📂 Dataset
 
-Designed a CNN architecture suitable for image classification.
-Included convolutional layers, pooling layers, and fully connected layers.
-## Model Training
+The project uses the CIFAR-10 dataset, containing:
+60,000 color images (32×32 pixels)
+10 classes with 6,000 images per class
+Dataset link: https://www.cs.toronto.edu/~kriz/cifar.html
 
-Train the CNN model using appropriate optimization techniques (e.g., stochastic gradient descent, Adam).
-Utilized techniques such as early stopping to prevent overfitting.
-## Model Evaluation
+🧹 Data Preprocessing
 
-Evaluate the trained model on a separate validation set.
-Compute and report metrics such as accuracy, precision, recall, and F1-score.
-Visualize the confusion matrix to understand model performance across different classes.
+Loaded and standardized CIFAR-10 data
+Resized & normalized images to scale pixel values to [0, 1]
+Applied data augmentation (rotation, flipping, zooming, shifting)
+Visualized sample images and class labels
+Objective: Ensure consistent image size, reduce overfitting, and improve generalization.
 
-## Transfer Learning
-Perform transfer learning with your chosen pre-trained models i.e., you will probably try a few and choose the best one (e.g., VGG16, Inception, ResNet trained on ImageNet)
+🧱 Model Architecture
+🔹 Custom CNN Model
 
-Train and evaluate the transfer learning model.
-Compare its performance against your custom CNN.
-Discuss advantages and trade-offs of using transfer learning over building a model from scratch.
+Multiple Convolutional + MaxPooling layers
+ReLU activations
+Fully connected dense layers
+Softmax output layer for classification
 
-## Code Quality
-Well-structured and commented code.
+🔹 Transfer Learning Models
 
+Fine-tuned pre-trained ImageNet models such as VGG16, ResNet50, or InceptionV3
+Frozen base layers + new custom classifier on top
+Faster training and improved accuracy with limited data
+
+⚙️ Model Training
+Custom CNN
+
+Optimizers used: Adam / SGD
+Batch training with augmented data
+Early Stopping (Applied):
+Monitors validation accuracy
+Stops when no improvement for 8 epochs
+Automatically saves best weights
+
+Transfer Learning
+
+Fine-tuning selected pre-trained models
+Early Stopping applied
+Learning Rate Reduction (LRR):
+Monitors validation accuracy
+Patience: 4 epochs
+Reduces LR by factor when performance stalls
+Minimum LR set to prevent model collapse
+
+📊 Model Evaluation
+
+Evaluated models on validation/testing datasets
+Metrics computed:
+Accuracy
+Precision
+Recall
+F1-score
+Visualized confusion matrix for class-wise performance
+Compared CNN vs Transfer Learning model performance
+
+🔁 Transfer Learning Summary
+
+Implemented several pre-trained models (e.g., VGG16, ResNet, Inception)
+Fine-tuned for CIFAR-10 classification
+
+Observations:
+
+Transfer Learning models achieved higher accuracy
+Faster convergence due to pre-learned features
+More robust for small datasets
+
+📈 Results & Discussion
+
+Custom CNN:
+
+Good performance but required longer training
+More prone to overfitting without callbacks
+
+Transfer Learning:
+
+Outperformed CNN in accuracy and speed
+Benefited significantly from LR Reduction
+More stable training with fewer epochs
+
+Conclusion:
+Transfer Learning offers substantial advantages for image classification tasks, especially when computational resources or data are limited.
+
+🧾 Code Quality
+
+Modular, well-structured, and thoroughly commented code
+
+Clear separation of preprocessing, modeling, training, and evaluation phases
+
+Easy for others to follow and reproduce results
 ## Authors
 - Sergei Volkov <taranarmo@gmail.com>
 - Mohamad Traiki <traiki93@gmail.com>
