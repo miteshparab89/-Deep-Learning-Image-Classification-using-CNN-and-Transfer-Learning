@@ -100,19 +100,7 @@ Modular, well-structured, and thoroughly commented code
 Clear separation of preprocessing, modeling, training, and evaluation phases
 Easy for others to follow and reproduce results
 
-### Files Description
-notebook.py: Original notebook containing implementations of all models and training code
-evaluate_models.py: Script for comprehensive model evaluation with metrics calculation and visualization
-models_evaluation_report.md: Detailed evaluation report with metrics and embedded images
-evaluation_images/: Directory containing saved visualizations (sample images and confusion matrices)
-initial_model.keras: Saved baseline CNN model
-model_with_more_layers.keras: Saved enhanced CNN model with additional layers
-transfer-learning1.keras: Saved transfer learning model with frozen base layers
-transfer-learning2-with-partial-retrain-of-base-model.keras: Saved fine-tuned transfer learning model
-plan.md: Project requirements and instructions
-README.md: This file with project documentation
-flake.nix and flake.lock: create environment with nix
-pyproject.toml and uv.lock: handling python dependencies
+
 
 
 
