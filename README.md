@@ -103,5 +103,5 @@ Clear separation of preprocessing, modeling, training, and evaluation phases
 Easy for others to follow and reproduce results
 ## Authors
 - Sergei Volkov <taranarmo@gmail.com>
-- Mohamad Traiki <traiki93@gmail.com>
+- Mohamad Traiki <m_traiki@gmx.de>
 - Mitesh Parab <miteshparab89@gmail.com>
