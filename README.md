@@ -39,12 +39,13 @@ Faster training and improved accuracy with limited data
 ## Model Training
 Custom CNN
 
-Optimizers used: Adam / SGD
-Batch training with augmented data
-Early Stopping (Applied):
-Monitors validation accuracy
-Stops when no improvement for 8 epochs
-Automatically saves best weights
+Models were evaluated using multiple metrics:
+
+Accuracy: Overall classification accuracy
+Precision: Ratio of true positives to all positive predictions
+Recall: Ratio of true positives to all actual positives
+F1-Score: Harmonic mean of precision and recall
+Confusion Matrix: Detailed class-wise performance analysis
 
 Transfer Learning
 
